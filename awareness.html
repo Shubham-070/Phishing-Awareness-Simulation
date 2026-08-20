@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CyberAware | Awareness</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <div class="awareness-card">
+
+        <div class="awareness-icon">
+            🛡️
+        </div>
+
+        <h1>
+            This Was a Cybersecurity Awareness Simulation
+        </h1>
+
+        <p>
+            The login page you just interacted with was a
+            simulated phishing-awareness exercise. Its purpose
+            is to demonstrate how attackers can create convincing
+            login pages to trick users into entering sensitive
+            information.
+        </p>
+
+        <p>
+            Cybersecurity awareness helps you recognize suspicious
+            login pages, unexpected messages, misleading links,
+            urgent requests, and other common social-engineering
+            techniques before they become a security problem.
+        </p>
+
+        <div class="security-tips">
+
+            <h2>Stay Safe Online</h2>
+
+            <ul>
+
+                <li>
+                    Check the website address before signing in.
+                </li>
+
+                <li>
+                    Never enter your password on an unfamiliar page.
+                </li>
+
+                <li>
+                    Be cautious with urgent or unexpected messages.
+                </li>
+
+                <li>
+                    Enable multi-factor authentication whenever possible.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="feedback">
+
+            <h2>
+                Help Us Improve This Simulation
+            </h2>
+
+
+            <div class="question">
+
+                <p>
+                    1. Did you think this website was real?
+                </p>
+
+                <div class="options">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="thought_real"
+                            value="Yes"
+                        >
+                        Yes
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="thought_real"
+                            value="Almost"
+                        >
+                        Almost
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="thought_real"
+                            value="No"
+                        >
+                        No
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="question">
+
+                <p>
+                    2. What revealed that this website was fake?
+                </p>
+
+                <textarea
+                    id="whatRevealed"
+                    placeholder="Write your answer here..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="question">
+
+                <p>
+                    3. Did you try to enter your login details?
+                </p>
+
+                <div class="options">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="tried_login"
+                            value="Yes"
+                        >
+                        Yes
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="tried_login"
+                            value="Almost"
+                        >
+                        Almost
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="tried_login"
+                            value="No"
+                        >
+                        No
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <button
+                onclick="submitFeedback()"
+                class="feedback-button"
+            >
+                Submit Feedback
+            </button>
+
+
+            <p
+                id="feedbackStatus"
+                class="feedback-status"
+            ></p>
+
+        </div>
+
+
+        <a
+            href="/"
+            class="back-button"
+        >
+            Try Again
+        </a>
+
+    </div>
+
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+</body>
+
+</html>
